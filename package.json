@@ -1,0 +1,34 @@
+{
+  "name": "diet-meal-planner",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "diet",
+    "meal planner",
+    "calorie tracker",
+    "water intake",
+    "nutrition"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
+    "nodemon": "^3.1.9",
+    "serialport": "^13.0.0"
+  },
+  "description": "A diet meal planner web application for meal tracking, calorie counting, meal planning, grocery purchase, and water intake reminder.",
+  "devDependencies": {
+    "vite": "^6.2.2"
+  }
+}
