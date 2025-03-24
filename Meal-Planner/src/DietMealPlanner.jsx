@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./DietMealPlanner.css"
+import "./DietMealPlanner.css";
 
 export default function DietMealPlanner({email}) {
   // State variables for meal, calories, etc.
@@ -15,46 +15,66 @@ export default function DietMealPlanner({email}) {
 
   // Fetch data from the API
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchMeals = async () => {
       try {
-        // Replace with your actual API endpoint
-        const response = await axios.get("http://localhost:5000/user-dashboard");
-        // Assuming the API response contains data like this
-        const { meals, groceryList, mealPlan, nutritionalInfo } = response.data;
-        // Update state with the fetched data
-        setMeals(meals);
-        // setWaterIntake(waterResponse.data.waterIntake);
-        setGroceryList(groceryList);
-        setMealPlan(mealPlan);
-        setNutritionalInfo(nutritionalInfo);
+        const response = await axios.get(`http://localhost:5000/mealLogs/${email}`);
+        setMeals(response.data.mealLogs);
       } catch (error) {
-        console.error("Error fetching data: ", error);
+        console.error("Error fetching meal logs: ", error);
       }
     };
-    fetchData();
-  }, []);
+    fetchMeals();
+  }, [email]); // Refetch when email changes
 
   // Fetch data when component mounts
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchWaterIntake = async () => {
       try {
         const response = await axios.get(`http://localhost:5000/waterIntake/${email}`);
         setWaterIntake(response.data.waterIntake);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching water intake: ", error);
       }
     };
-    fetchData();
+    fetchWaterIntake();
   }, [email]);
 
-  const addMeal = () => {
-    if (meal && calories) {
-      setMeals([...meals, { meal, calories }]);
-      setMeal("");
+
+  // ✅ Add a meal & log it to the backend
+  const addMeal = async () => {
+    if (!meal || !calories) return;
+    const newMeal = { itemName: meal, calories };
+    try {
+      const response = await axios.post("http://localhost:5000/logMeal", {
+        email,
+        meal: newMeal,
+      });
+      setMeals(response.data.mealLogs);
+      setMeal(""); // Reset input field
       setCalories("");
+    } catch (error) {
+      console.error("Error logging meal: ", error);
     }
   };
 
+
+  // ✅ Update water intake in backend
+  const handleDrinkWater = async () => {
+    try {
+      console.log("Sending request to update water intake...");
+      await axios.put(`http://localhost:5000/updateWaterIntake/${email}`, {
+        email,
+        waterIntake: waterIntake + 1,
+      });
+
+      const response = await axios.get(`http://localhost:5000/waterIntake/${email}`);
+      setWaterIntake(response.data.waterIntake);
+    } catch (error) {
+      console.error("Error updating water intake:", error);
+    }
+  };
+
+  // ✅ Add grocery items (Client-side only for now)
   const addGroceryItem = () => {
     if (groceryItem) {
       setGroceryList([...groceryList, groceryItem]);
@@ -62,31 +82,10 @@ export default function DietMealPlanner({email}) {
     }
   };
 
-  const handleDrinkWater = async () => {
-    try {
-      // Make the API request to update the water intake
-      await axios.put(`http://localhost:5000/updateWaterIntake/${email}`, {
-        // Send the current water intake + 1 to the server
-        waterIntake: waterIntake + 1,
-        email: email,
-      });
-  
-      // After updating, fetch the updated water intake from the server
-      const response = await axios.get(`http://localhost:5000/waterIntake/${email}`);
-      
-      // Update the state with the new water intake
-      setWaterIntake(response.data.waterIntake);
-  
-    } catch (error) {
-      console.error("Error updating water intake:", error);
-    }
-  };
-  
-
   return (
     <div className="container py-4">
       <h1 className="mb-4">Diet Meal Planner</h1>
-      
+
       {/* Meal Tracking */}
       <div className="card mb-3">
         <div className="card-body">
@@ -98,6 +97,7 @@ export default function DietMealPlanner({email}) {
               value={meal}
               onChange={(e) => setMeal(e.target.value)}
             />
+
             <input
               className="form-control"
               placeholder="Calories"
@@ -109,7 +109,9 @@ export default function DietMealPlanner({email}) {
           </div>
           <ul className="mt-3 list-group">
             {meals.map((m, index) => (
-              <li key={index} className="list-group-item">{m.meal} - {m.calories} kcal</li>
+              <li key={index} className="list-group-item">
+                {m.itemName} - {m.calories} kcal
+              </li>
             ))}
           </ul>
         </div>
