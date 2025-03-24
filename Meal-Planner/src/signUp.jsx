@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./login.css";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");

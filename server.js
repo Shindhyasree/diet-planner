@@ -21,7 +21,7 @@ const UserSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
-  mealLogs: [{ name: String, calories: Number }],
+  mealLogs: [{ itemName: String, calories: Number }],
   waterIntake: Number,
 });
 const User = mongoose.model("User", UserSchema);
