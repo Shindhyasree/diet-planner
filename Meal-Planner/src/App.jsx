@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Routes>
         {/* Route to LoginPage */}
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<LoginPage />} />
         
         {/* Route to Dashboard, with email as a dynamic parameter */}
         <Route path="/Dashboard/:email" element={<Dashboard />} />
