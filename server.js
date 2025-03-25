@@ -6,27 +6,16 @@ const { SerialPort } = require("serialport");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
 const app = express();
+const User = require("./models/users");
 
 app.use(express.json());
 app.use(cors());
 
-// MongoDB connection
 mongoose
   .connect("mongodb://localhost:27017/diet_meal_planner")
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-// User Schema
-const UserSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String,
-  mealLogs: [{ itemName: String, calories: Number }],
-  waterIntake: Number,
-});
-const User = mongoose.model("User", UserSchema);
-
-// Register User
 app.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password) {
@@ -38,7 +27,6 @@ app.post("/register", async (req, res) => {
   res.json({ message: "User registered successfully" });
 });
 
-// Login User
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
@@ -49,7 +37,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// Log Meal
 app.post("/logMeal", async (req, res) => {
   const { email, meal } = req.body;
   const user = await User.findOne({ email });
@@ -63,8 +50,6 @@ app.post("/logMeal", async (req, res) => {
   res.json({ message: "Meal(s) logged successfully", mealLogs: user.mealLogs });
 });
 
-
-// Fetch Meal Logs
 app.get("/mealLogs/:email", async (req, res) => {
   const { email } = req.params;
   const user = await User.findOne({ email });
@@ -72,7 +57,6 @@ app.get("/mealLogs/:email", async (req, res) => {
   res.json({ mealLogs: user.mealLogs });
 });
 
-// Update Water Intake
 app.put("/updateWaterIntake/:email", async (req, res) => {
   const { email, waterIntake } = req.body;
   const user = await User.findOne({ email });
@@ -82,7 +66,6 @@ app.put("/updateWaterIntake/:email", async (req, res) => {
   res.json({ waterIntake: user.waterIntake });
 });
 
-// Fetch Water Intake
 app.get("/waterIntake/:email", async (req, res) => {
   const { email } = req.params;
   const user = await User.findOne({ email });
@@ -90,7 +73,6 @@ app.get("/waterIntake/:email", async (req, res) => {
   res.json({ waterIntake: user.waterIntake });
 });
 
-// Start server
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });

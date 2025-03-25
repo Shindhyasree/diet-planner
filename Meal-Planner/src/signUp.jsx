@@ -24,7 +24,7 @@ export default function SignUpPage() {
 
       if (response.data.message === "User registered successfully") {
         setSuccess("Registration successful! Redirecting to login...");
-        setTimeout(() => navigate("/login"), 2000); // Redirect after 2 seconds
+        setTimeout(() => navigate("/login"), 2000);
       }
     } catch (err) {
       setError("Registration failed. Email may already be in use.");

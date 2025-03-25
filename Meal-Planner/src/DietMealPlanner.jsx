@@ -7,9 +7,8 @@ export default function DietMealPlanner({email}) {
   const [meal, setMeal] = useState("");
   const [calories, setCalories] = useState("");
   const [meals, setMeals] = useState([]);
-  const [waterIntake, setWaterIntake] = useState(0);  // Track water intake
+  const [waterIntake, setWaterIntake] = useState(0);
 
-  // Fetch data from the API
   useEffect(() => {
     const fetchMeals = async () => {
       try {
@@ -20,9 +19,8 @@ export default function DietMealPlanner({email}) {
       }
     };
     fetchMeals();
-  }, [email]); // Refetch when email changes
+  }, [email]);
 
-  // Fetch data when component mounts
   useEffect(() => {
     const fetchWaterIntake = async () => {
       try {
@@ -35,8 +33,6 @@ export default function DietMealPlanner({email}) {
     fetchWaterIntake();
   }, [email]);
 
-
-  // ✅ Add a meal & log it to the backend
   const addMeal = async () => {
     if (!meal || !calories) return;
     const newMeal = { itemName: meal, calories };
@@ -53,8 +49,6 @@ export default function DietMealPlanner({email}) {
     }
   };
 
-
-  // ✅ Update water intake in backend
   const handleDrinkWater = async () => {
     try {
       console.log("Sending request to update water intake...");
@@ -62,7 +56,6 @@ export default function DietMealPlanner({email}) {
         email,
         waterIntake: waterIntake + 1,
       });
-
       const response = await axios.get(`http://localhost:5000/waterIntake/${email}`);
       setWaterIntake(response.data.waterIntake);
     } catch (error) {
@@ -73,8 +66,6 @@ export default function DietMealPlanner({email}) {
   return (
     <div className="container py-4">
       <h1 className="mb-4">Diet Meal Planner</h1>
-
-      {/* Meal Tracking */}
       <div className="card mb-3">
         <div className="card-body">
           <h2 className="card-title">Meal Tracking</h2>
@@ -85,7 +76,6 @@ export default function DietMealPlanner({email}) {
               value={meal}
               onChange={(e) => setMeal(e.target.value)}
             />
-
             <input
               className="form-control"
               placeholder="Calories"
@@ -104,8 +94,6 @@ export default function DietMealPlanner({email}) {
           </ul>
         </div>
       </div>
-
-      {/* Water Intake Reminder */}
       <div className="card mb-3">
         <div className="card-body">
           <h2 className="card-title">Water Intake</h2>
@@ -113,7 +101,6 @@ export default function DietMealPlanner({email}) {
           <button className="btn btn-primary" onClick={handleDrinkWater}>Drink Water</button>
         </div>
       </div>
-
     </div>
   );
 }
