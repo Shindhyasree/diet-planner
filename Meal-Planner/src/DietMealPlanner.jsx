@@ -8,10 +8,6 @@ export default function DietMealPlanner({email}) {
   const [calories, setCalories] = useState("");
   const [meals, setMeals] = useState([]);
   const [waterIntake, setWaterIntake] = useState(0);  // Track water intake
-  const [groceryItem, setGroceryItem] = useState("");
-  const [groceryList, setGroceryList] = useState([]);
-  const [mealPlan, setMealPlan] = useState("");
-  const [nutritionalInfo, setNutritionalInfo] = useState("");
 
   // Fetch data from the API
   useEffect(() => {
@@ -74,14 +70,6 @@ export default function DietMealPlanner({email}) {
     }
   };
 
-  // ✅ Add grocery items (Client-side only for now)
-  const addGroceryItem = () => {
-    if (groceryItem) {
-      setGroceryList([...groceryList, groceryItem]);
-      setGroceryItem("");
-    }
-  };
-
   return (
     <div className="container py-4">
       <h1 className="mb-4">Diet Meal Planner</h1>
@@ -126,52 +114,6 @@ export default function DietMealPlanner({email}) {
         </div>
       </div>
 
-      {/* Grocery List */}
-      <div className="card mb-3">
-        <div className="card-body">
-          <h2 className="card-title">Grocery List</h2>
-          <div className="d-flex gap-2 mt-2">
-            <input
-              className="form-control"
-              placeholder="Grocery Item"
-              value={groceryItem}
-              onChange={(e) => setGroceryItem(e.target.value)}
-            />
-            <button className="btn btn-primary" onClick={addGroceryItem}>Add</button>
-          </div>
-          <ul className="mt-3 list-group">
-            {groceryList.map((item, index) => (
-              <li key={index} className="list-group-item">{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Meal Planning */}
-      <div className="card mb-3">
-        <div className="card-body">
-          <h2 className="card-title">Meal Planning</h2>
-          <textarea
-            className="form-control mt-2"
-            placeholder="Plan your meals for the week..."
-            value={mealPlan}
-            onChange={(e) => setMealPlan(e.target.value)}
-          />
-        </div>
-      </div>
-
-      {/* Nutritional Analysis */}
-      <div className="card">
-        <div className="card-body">
-          <h2 className="card-title">Nutritional Analysis</h2>
-          <textarea
-            className="form-control mt-2"
-            placeholder="Enter meal details to analyze nutrition..."
-            value={nutritionalInfo}
-            onChange={(e) => setNutritionalInfo(e.target.value)}
-          />
-        </div>
-      </div>
     </div>
   );
 }
