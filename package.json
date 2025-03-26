@@ -24,7 +24,6 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.12.1",
-    "nodemon": "^3.1.9",
     "serialport": "^13.0.0"
   },
   "description": "A diet meal planner web application for meal tracking, calorie counting, meal planning, grocery purchase, and water intake reminder.",
