@@ -1,48 +1,76 @@
 import { useState, useEffect } from "react";
+import { useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./DietMealPlanner.css";
+import mealsData from "../../meals.json";
 
-export default function DietMealPlanner({email}) {
-  // State variables for meal, calories, etc.
+export default function DietMealPlanner() {
+  const { userId } = useParams();
+  const location = useLocation();
+  const [username, setUsername] = useState("");
   const [meal, setMeal] = useState("");
   const [calories, setCalories] = useState("");
   const [meals, setMeals] = useState([]);
   const [waterIntake, setWaterIntake] = useState(0);
+  const [userPreferences, setUserPreferences] = useState([]);
+  const [filteredMeals, setFilteredMeals] = useState([]);
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const preferences = searchParams.get("preferences")?.split(",") || [];
+    setUserPreferences(preferences);
+    const matchedMeals = mealsData.filter(meal =>
+      meal.preferences.some(pref => preferences.includes(pref))
+    );
+    setFilteredMeals(matchedMeals);
+  }, [location.search]);
+
+  useEffect(() => {
+    const fetchUsername = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/user/${userId}`);
+        setUsername(response.data.name);
+      } catch (error) {
+        console.error("Error fetching username:", error);
+      }
+    };
+    fetchUsername();
+  }, [userId]);
 
   useEffect(() => {
     const fetchMeals = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/mealLogs/${email}`);
+        const response = await axios.get(`http://localhost:5000/mealLogs/${userId}`);
         setMeals(response.data.mealLogs);
       } catch (error) {
         console.error("Error fetching meal logs: ", error);
       }
     };
     fetchMeals();
-  }, [email]);
+  }, [userId]);
 
   useEffect(() => {
     const fetchWaterIntake = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/waterIntake/${email}`);
+        const response = await axios.get(`http://localhost:5000/waterIntake/${userId}`);
         setWaterIntake(response.data.waterIntake);
       } catch (error) {
         console.error("Error fetching water intake: ", error);
       }
     };
     fetchWaterIntake();
-  }, [email]);
+  }, [userId]);
 
   const addMeal = async () => {
     if (!meal || !calories) return;
     const newMeal = { itemName: meal, calories };
     try {
-      const response = await axios.post("http://localhost:5000/logMeal", {
-        email,
+      const response = await axios.post(`http://localhost:5000/logMeal/${userId}`, {
+        userId,
         meal: newMeal,
       });
       setMeals(response.data.mealLogs);
-      setMeal(""); // Reset input field
+      setMeal("");
       setCalories("");
     } catch (error) {
       console.error("Error logging meal: ", error);
@@ -51,12 +79,10 @@ export default function DietMealPlanner({email}) {
 
   const handleDrinkWater = async () => {
     try {
-      console.log("Sending request to update water intake...");
-      await axios.put(`http://localhost:5000/updateWaterIntake/${email}`, {
-        email,
+      await axios.put(`http://localhost:5000/updateWaterIntake/${userId}`, {
         waterIntake: waterIntake + 1,
       });
-      const response = await axios.get(`http://localhost:5000/waterIntake/${email}`);
+      const response = await axios.get(`http://localhost:5000/waterIntake/${userId}`);
       setWaterIntake(response.data.waterIntake);
     } catch (error) {
       console.error("Error updating water intake:", error);
@@ -65,8 +91,21 @@ export default function DietMealPlanner({email}) {
 
   return (
     <div className="container py-4">
+      <h1>Welcome, {username || "User"}</h1>
       <h1 className="mb-4">Diet Meal Planner</h1>
-      <div className="card mb-3">
+      <h2 className="text-xl font-bold text-center mb-4">Your Meal Plan</h2>
+      {filteredMeals.length > 0 ? (
+        filteredMeals.map((meal, index) => (
+          <div key={index} className="p-3 mb-2 d-flex justify-content-between align-item-center">
+            <p className="m-0 g-0">{meal.name}</p>
+            <p className="m-0 g-0">Category: {meal.category}</p>
+            {/* <p><strong>Ingredients:</strong> {meal.ingredients.join(", ")}</p> */}
+          </div>
+        ))
+      ) : (
+        <p className="text-center text-gray-500">No meals found for your preferences.</p>
+      )}
+      <div className="card my-3">
         <div className="card-body">
           <h2 className="card-title">Meal Tracking</h2>
           <div className="d-flex gap-2 mt-2">

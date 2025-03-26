@@ -11,7 +11,7 @@ export default function FooterMarquee() {
 
     return () => clearInterval(interval);
   }, []);
-  
+
   return (
     <footer style={footerStyle}>
       <div style={marqueeStyle}>{tips[index]}</div>

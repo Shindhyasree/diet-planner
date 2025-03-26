@@ -14,14 +14,12 @@ export default function SignUpPage() {
     e.preventDefault();
     setError("");
     setSuccess("");
-
     try {
       const response = await axios.post("http://localhost:5000/register", {
         name,
         email,
         password,
       });
-
       if (response.data.message === "User registered successfully") {
         setSuccess("Registration successful! Redirecting to login...");
         setTimeout(() => navigate("/login"), 2000);

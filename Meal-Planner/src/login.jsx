@@ -17,7 +17,8 @@ export default function LoginPage() {
         password,
       });
       if (response.data.user) {
-        navigate(`/Dashboard/${email}`);
+        const userId = response.data.user._id;
+        navigate(`/bmicalculator/${userId}`);
       }
     } catch (err) {
       setError("Invalid credentials. Please try again.");

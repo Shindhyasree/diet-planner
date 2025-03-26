@@ -1,0 +1,173 @@
+[
+    {
+        "name": "Oatmeal with Fruits",
+        "category": "breakfast",
+        "preferences": [
+            "vegan",
+            "low-calorie"
+        ],
+        "ingredients": [
+            "oats",
+            "banana",
+            "strawberries",
+            "almond milk"
+        ]
+    },
+    {
+        "name": "Grilled Chicken Salad",
+        "category": "lunch",
+        "preferences": [
+            "high-protein",
+            "keto"
+        ],
+        "ingredients": [
+            "chicken breast",
+            "lettuce",
+            "avocado",
+            "olive oil"
+        ]
+    },
+    {
+        "name": "Salmon with Steamed Veggies",
+        "category": "dinner",
+        "preferences": [
+            "high-protein",
+            "low-carb"
+        ],
+        "ingredients": [
+            "salmon",
+            "broccoli",
+            "carrots",
+            "lemon"
+        ]
+    },
+    {
+        "name": "Greek Yogurt with Nuts",
+        "category": "breakfast",
+        "preferences": [
+            "high-protein",
+            "low-carb"
+        ],
+        "ingredients": [
+            "greek yogurt",
+            "almonds",
+            "walnuts",
+            "honey"
+        ]
+    },
+    {
+        "name": "Quinoa & Chickpea Salad",
+        "category": "lunch",
+        "preferences": [
+            "vegan",
+            "high-protein",
+            "low-calorie"
+        ],
+        "ingredients": [
+            "quinoa",
+            "chickpeas",
+            "cucumber",
+            "olive oil",
+            "lemon"
+        ]
+    },
+    {
+        "name": "Tofu Stir-Fry with Brown Rice",
+        "category": "dinner",
+        "preferences": [
+            "vegan",
+            "high-protein"
+        ],
+        "ingredients": [
+            "tofu",
+            "bell peppers",
+            "onion",
+            "soy sauce",
+            "brown rice"
+        ]
+    },
+    {
+        "name": "Egg and Avocado Toast",
+        "category": "breakfast",
+        "preferences": [
+            "high-protein"
+        ],
+        "ingredients": [
+            "whole wheat bread",
+            "avocado",
+            "boiled eggs",
+            "pepper"
+        ]
+    },
+    {
+        "name": "Lentil Soup",
+        "category": "lunch",
+        "preferences": [
+            "vegan",
+            "high-protein"
+        ],
+        "ingredients": [
+            "lentils",
+            "carrots",
+            "tomatoes",
+            "onion",
+            "garlic"
+        ]
+    },
+    {
+        "name": "Grilled Fish with Quinoa",
+        "category": "dinner",
+        "preferences": [
+            "high-protein",
+            "low-calorie"
+        ],
+        "ingredients": [
+            "grilled fish",
+            "quinoa",
+            "asparagus",
+            "lemon"
+        ]
+    },
+    {
+        "name": "Peanut Butter Banana Smoothie",
+        "category": "breakfast",
+        "preferences": [
+            "high-protein"
+        ],
+        "ingredients": [
+            "banana",
+            "peanut butter",
+            "almond milk",
+            "protein powder"
+        ]
+    },
+    {
+        "name": "Chicken & Avocado Wrap",
+        "category": "lunch",
+        "preferences": [
+            "high-protein",
+            "low-carb"
+        ],
+        "ingredients": [
+            "chicken breast",
+            "avocado",
+            "lettuce",
+            "whole wheat wrap"
+        ]
+    },
+    {
+        "name": "Vegetable Stir-Fry with Tofu",
+        "category": "dinner",
+        "preferences": [
+            "vegan",
+            "low-calorie"
+        ],
+        "ingredients": [
+            "tofu",
+            "carrots",
+            "broccoli",
+            "bell peppers",
+            "soy sauce"
+        ]
+    }
+]
