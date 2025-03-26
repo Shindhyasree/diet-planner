@@ -1,0 +1,38 @@
+[
+  {
+    "name": "gluten-free",
+    "description": "No wheat, barley, rye, or gluten-containing foods."
+  },
+  {
+    "name": "vegan",
+    "description": "No animal products, including meat, dairy, eggs, or honey."
+  },
+  {
+    "name": "vegetarian",
+    "description": "No meat, but may include dairy and eggs."
+  },
+  {
+    "name": "keto",
+    "description": "Low-carb, high-fat diet with moderate protein."
+  },
+  {
+    "name": "paleo",
+    "description": "Focuses on whole foods, avoiding processed foods and grains."
+  },
+  {
+    "name": "dairy-free",
+    "description": "No milk, cheese, butter, or dairy-based products."
+  },
+  {
+    "name": "nut-free",
+    "description": "No nuts or nut-based products."
+  },
+  {
+    "name": "halal",
+    "description": "Follows Islamic dietary laws."
+  },
+  {
+    "name": "kosher",
+    "description": "Follows Jewish dietary laws."
+  }
+]
