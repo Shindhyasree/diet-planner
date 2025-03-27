@@ -3,6 +3,8 @@ import { useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./DietMealPlanner.css";
 import mealsData from "../../meals.json";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function DietMealPlanner() {
   const { userId } = useParams();
@@ -14,6 +16,7 @@ export default function DietMealPlanner() {
   const [waterIntake, setWaterIntake] = useState(0);
   const [userPreferences, setUserPreferences] = useState([]);
   const [filteredMeals, setFilteredMeals] = useState([]);
+  const mealOrder = { breakfast: 1, lunch: 2, dinner: 3 };
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -72,6 +75,14 @@ export default function DietMealPlanner() {
       setMeals(response.data.mealLogs);
       setMeal("");
       setCalories("");
+      toast.info(response.data.alert || "Meal logged successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     } catch (error) {
       console.error("Error logging meal: ", error);
     }
@@ -95,16 +106,29 @@ export default function DietMealPlanner() {
       <h1 className="mb-4">Diet Meal Planner</h1>
       <h2 className="text-xl font-bold text-center mb-4">Your Meal Plan</h2>
       {filteredMeals.length > 0 ? (
-        filteredMeals.map((meal, index) => (
-          <div key={index} className="p-3 mb-2 d-flex justify-content-between align-item-center">
-            <p className="m-0 g-0">{meal.name}</p>
-            <p className="m-0 g-0">Category: {meal.category}</p>
-            {/* <p><strong>Ingredients:</strong> {meal.ingredients.join(", ")}</p> */}
-          </div>
-        ))
+        filteredMeals
+          .slice()
+          .sort((a, b) => {
+            const orderA = mealOrder[a.category.toLowerCase()] || 4;
+            const orderB = mealOrder[b.category.toLowerCase()] || 4;
+            return orderA - orderB;
+          })
+          .map((meal, index) => (
+            <div key={index} className="p-3 mb-2 d-flex justify-content-between align-items-center">
+              <div>
+                <p className="m-0 g-0">{meal.name}</p>
+                <p className="m-0 g-0"><strong>Ingredients:</strong> {meal.ingredients.join(", ")}</p>
+              </div>
+              <div className="d-flex flex-column align-items-end">
+                <p className="m-0 g-0">Category: {meal.category}</p>
+                <p className="m-0 g-0"><strong>Calorie:</strong> {meal.calorie}</p>
+              </div>
+            </div>
+          ))
       ) : (
         <p className="text-center text-gray-500">No meals found for your preferences.</p>
       )}
+
       <div className="card my-3">
         <div className="card-body">
           <h2 className="card-title">Meal Tracking</h2>
@@ -140,6 +164,7 @@ export default function DietMealPlanner() {
           <button className="btn btn-primary" onClick={handleDrinkWater}>Drink Water</button>
         </div>
       </div>
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
     </div>
   );
 }
