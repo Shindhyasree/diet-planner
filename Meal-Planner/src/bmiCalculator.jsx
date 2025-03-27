@@ -125,7 +125,7 @@ const BMICalculator = () => {
         <button onClick={calculateBMI} className="bg-primary text-white p-2 rounded w-1/2">Calculate BMI</button>
       </div>
       {bmi && (
-        <div className="mt-4 text-center">
+        <div className="my-5 text-center">
           <p className="text-lg font-semibold">Your BMI: {bmi}</p>
           <p className="text-gray-700">Category: {message}</p>
           {recommendedCalories && (
