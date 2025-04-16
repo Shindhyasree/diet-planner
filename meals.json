@@ -1,200 +1,703 @@
 [
     {
         "name": "Vegan Smoothie Bowl",
+        "description": "A refreshing and nutrient-rich bowl made with blended bananas and berries, topped with chia seeds and creamy coconut milk. Perfect for a dairy-free, nut-free, and gluten-free start to the day.",
         "category": "breakfast",
         "preferences": [
             "vegan",
             "dairy-free",
             "nut-free",
             "gluten-free",
-            "halal",
             "kosher"
         ],
         "ingredients": [
-            "banana",
-            "berries",
-            "coconut milk",
-            "chia seeds"
+            "Banana",
+            "Berries",
+            "Coconut milk",
+            "Chia seeds"
         ],
-        "calorie": 320
+        "calorie": 320,
+        "image": "https://images.unsplash.com/photo-1590301157284-ab2f8707bdc1?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "name": "Vegetarian Omelette",
+        "name": "Omelette",
+        "description": "A fluffy and savory omelette loaded with bell peppers, onions, and melted cheese. A simple gluten-free choice for a protein-packed morning.",
         "category": "breakfast",
         "preferences": [
-            "vegetarian",
-            "gluten-free",
-            "halal",
-            "kosher"
+            "gluten-free"
         ],
         "ingredients": [
-            "eggs",
-            "bell peppers",
-            "onions",
-            "cheese"
+            "Eggs",
+            "Bell peppers",
+            "Onions",
+            "Cheese"
         ],
-        "calorie": 290
+        "calorie": 290,
+        "image": "https://images.unsplash.com/photo-1668891876129-619ccf5059f0?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "name": "Keto Avocado Bacon Wrap",
+        "name": "Avocado Bacon Wrap",
+        "description": "A low-carb wrap featuring creamy avocado and crispy bacon wrapped in fresh lettuce with cheese. Ideal for keto enthusiasts looking for a satisfying meal.",
         "category": "breakfast",
         "preferences": [
             "keto",
             "gluten-free"
         ],
         "ingredients": [
-            "avocado",
-            "bacon",
-            "lettuce",
-            "cheese"
+            "Avocado",
+            "Bacon",
+            "Lettuce",
+            "Cheese"
         ],
-        "calorie": 400
+        "calorie": 400,
+        "image": "https://www.ketofocus.com/wp-content/uploads/air-fryer-bacon-wrapped-avocado-1.jpg"
     },
     {
         "name": "Gluten-Free Pancakes",
+        "description": "Soft, fluffy pancakes made with gluten-free flour, eggs, and almond milk, lightly sweetened with honey. A guilt-free treat to start your day.",
         "category": "breakfast",
         "preferences": [
             "gluten-free"
         ],
         "ingredients": [
-            "gluten-free flour",
-            "eggs",
-            "almond milk",
-            "honey"
+            "Gluten-free flour",
+            "Eggs",
+            "Almond milk",
+            "Honey"
         ],
-        "calorie": 350
+        "calorie": 350,
+        "image": "https://images.unsplash.com/photo-1671527301006-e143d433f8bb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "name": "Paleo Chicken Salad",
+        "description": "A protein-rich salad with grilled chicken, fresh veggies, and olive oil dressing. A paleo-friendly, nut-free, and dairy-free lunch option.",
         "category": "lunch",
         "preferences": [
             "paleo",
             "gluten-free",
             "dairy-free",
-            "nut-free",
-            "halal",
-            "kosher"
+            "nut-free"
         ],
         "ingredients": [
-            "grilled chicken",
-            "lettuce",
-            "tomato",
-            "olive oil"
+            "Grilled chicken",
+            "Lettuce",
+            "Tomato",
+            "Olive oil"
         ],
-        "calorie": 450
+        "calorie": 450,
+        "image": "https://images.unsplash.com/photo-1716034353309-c6066ae24c67?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "name": "Dairy-Free Quinoa Bowl",
+        "description": " A wholesome bowl of quinoa topped with black beans, avocado, and a zesty lime dressing. Packed with fiber and nutrients for a fulfilling vegan meal.",
         "category": "lunch",
         "preferences": [
             "dairy-free",
             "gluten-free",
             "nut-free",
             "vegan",
-            "vegetarian",
-            "halal",
-            "kosher"
+            "vegetarian"
         ],
         "ingredients": [
-            "quinoa",
-            "black beans",
-            "avocado",
-            "lime dressing"
+            "Quinoa",
+            "Black beans",
+            "Avocado",
+            "Lime dressing"
         ],
-        "calorie": 420
+        "calorie": 420,
+        "image": "https://images.unsplash.com/photo-1615865417491-9941019fbc00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         "name": "Nut-Free Grilled Fish",
+        "description": "A  balanced plate of grilled salmon, lemon, steamed broccoli, and brown rice. A clean and lean lunch perfect for dairy-free and gluten-free diets.",
         "category": "lunch",
         "preferences": [
             "nut-free",
             "gluten-free",
-            "dairy-free",
-            "halal",
-            "kosher"
+            "dairy-free"
         ],
         "ingredients": [
-            "grilled salmon",
-            "lemon",
-            "steamed broccoli",
-            "brown rice"
+            "Grilled salmon",
+            "Lemon",
+            "Steamed broccoli",
+            "Brown rice"
         ],
-        "calorie": 480
+        "calorie": 480,
+        "image": "https://images.unsplash.com/photo-1676300185165-3f543c1fcb72?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "name": "Halal Beef Stir-Fry",
-        "category": "dinner",
-        "preferences": [
-            "halal",
-            "gluten-free",
-            "nut-free",
-            "dairy-free",
-            "keto"
-        ],
-        "ingredients": [
-            "beef strips",
-            "bell peppers",
-            "garlic",
-            "coconut aminos"
-        ],
-        "calorie": 500
-    },
-    {
-        "name": "Kosher Roasted Vegetable Plate",
-        "category": "dinner",
-        "preferences": [
-            "kosher",
-            "vegan",
-            "vegetarian",
-            "gluten-free",
-            "dairy-free",
-            "nut-free",
-            "paleo"
-        ],
-        "ingredients": [
-            "zucchini",
-            "eggplant",
-            "bell peppers",
-            "olive oil"
-        ],
-        "calorie": 380
-    },
-    {
-        "name": "Keto Grilled Chicken & Asparagus",
+        "name": "Beef Stir-Fry",
+        "description": "A bold, savory stir-fry of tender beef strips, vibrant bell peppers, garlic, and coconut aminos. A keto and halal-friendly dinner rich in protein and flavor.",
         "category": "dinner",
         "preferences": [
             "keto",
             "gluten-free",
             "nut-free",
             "dairy-free",
-            "halal",
+            "halal"
+        ],
+        "ingredients": [
+            "Beef strips",
+            "Bell peppers",
+            "Garlic",
+            "Coconut aminos"
+        ],
+        "calorie": 500,
+        "image": "https://www.lemonblossoms.com/wp-content/uploads/2019/03/Easy-Beef-Stir-Fry-S2.jpg"
+    },
+    {
+        "name": "Roasted Vegetable Plate",
+        "description": "A colorful medley of roasted zucchini, eggplant, and bell peppers drizzled in olive oil. A plant-based, kosher meal full of natural goodness.",
+        "category": "dinner",
+        "preferences": [
+            "vegan",
+            "vegetarian",
+            "gluten-free",
+            "dairy-free",
+            "nut-free",
+            "paleo",
             "kosher"
         ],
         "ingredients": [
-            "grilled chicken breast",
-            "asparagus",
-            "butter",
-            "garlic"
+            "Zucchini",
+            "Eggplant",
+            "Bell peppers",
+            "Olive oil"
         ],
-        "calorie": 470
+        "calorie": 380,
+        "image": "https://images.unsplash.com/photo-1606791422814-b32c705e3e2f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "name": "Paleo Baked Salmon with Veggies",
+        "name": "Grilled Chicken & Asparagus",
+        "description": " Juicy grilled chicken breast paired with tender asparagus and seasoned with butter and garlic. A satisfying keto and gluten-free dinner.",
+        "category": "dinner",
+        "preferences": [
+            "keto",
+            "gluten-free",
+            "nut-free"
+        ],
+        "ingredients": [
+            "Grilled chicken breast",
+            "Asparagus",
+            "Butter",
+            "Garlic"
+        ],
+        "calorie": 470,
+        "image": "https://sandersonfarms.com/wp-content/uploads/2020/12/Grilled-Chicken-Thighs-with-Rice-and-Asparagus-_18645_1.jpg"
+    },
+    {
+        "name": "Baked Salmon with Veggies",
+        "description": "Oven-baked salmon with a hearty side of carrots and broccoli, dressed in olive oil. A nutritious paleo dinner that’s dairy- and nut-free.",
         "category": "dinner",
         "preferences": [
             "paleo",
             "gluten-free",
             "dairy-free",
-            "nut-free",
+            "nut-free"
+        ],
+        "ingredients": [
+            "Salmon fillet",
+            "Carrots",
+            "Broccoli",
+            "Olive oil"
+        ],
+        "calorie": 510,
+        "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Chicken Shawarma",
+        "description": "Flavorful halal chicken marinated in shawarma spices, lemon, and garlic, then grilled to perfection. Great on its own or wrapped in flatbread.",
+        "category": "dinner",
+        "preferences": [
             "halal",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Chicken",
+            "Garlic",
+            "Lemon",
+            "Olive oil",
+            "Shawarma spices"
+        ],
+        "calorie": 500,
+        "image": "https://t3.ftcdn.net/jpg/06/72/68/02/360_F_672680295_4ZLh1jK9s4sd9FHyOTuhsw9GNmVJrX4S.jpg"
+    },
+    {
+        "name": "Falafel Wrap",
+        "description": "Crispy chickpea falafel wrapped with fresh lettuce, tomatoes, parsley, garlic, and creamy tahini. A vegan and gluten-free delight.",
+        "category": "lunch",
+        "preferences": [
+            "halal",
+            "vegan",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Chickpeas",
+            "Tahini",
+            "Parsley",
+            "Garlic",
+            "Lettuce",
+            "Tomatoes"
+        ],
+        "calorie": 350,
+        "image": "https://images.unsplash.com/photo-1681072530653-db8fe2538631?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Grilled Lamb Chops",
+        "description": "Succulent lamb chops grilled with rosemary, garlic, and olive oil. A hearty halal meal full of savory goodness.",
+        "category": "dinner",
+        "preferences": [
+            "halal",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Lamb chops",
+            "Rosemary",
+            "Garlic",
+            "Olive oil"
+        ],
+        "calorie": 600,
+        "image": "https://t4.ftcdn.net/jpg/10/93/29/29/360_F_1093292948_z3K8BDihRzWiMXjfCRTsQvg5shtE0Sc9.jpg"
+    },
+    {
+        "name": "Beef Kebabs",
+        "description": "Tender beef chunks grilled with bell peppers, onions, and spices. A high-protein, gluten-free dinner perfect for meat lovers.",
+        "category": "dinner",
+        "preferences": [
+            "halal",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Beef",
+            "Onions",
+            "Bell peppers",
+            "Garlic",
+            "Spices"
+        ],
+        "calorie": 450,
+        "image": "https://t3.ftcdn.net/jpg/02/05/88/70/360_F_205887022_m7kZiaMdZdc68CAKApQI1igUiq5ERtU3.jpg"
+    },
+    {
+        "name": "Chicken Kebab Salad",
+        "description": "A light and fresh salad topped with grilled chicken, cucumber, tomato, and a zesty lemon-olive oil dressing. Ideal for halal and dairy-free diets.",
+        "category": "lunch",
+        "preferences": [
+            "halal",
+            "gluten-free",
+            "dairy-free"
+        ],
+        "ingredients": [
+            "Grilled chicken",
+            "Lettuce",
+            "Cucumber",
+            "Tomato",
+            "Olive oil",
+            "Lemon dressing"
+        ],
+        "calorie": 400,
+        "image": "https://images.unsplash.com/photo-1670237735381-ac5c7fa72c51?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Scrambled Eggs with Spinach",
+        "description": "Soft scrambled eggs sautéed with spinach and olive oil, seasoned simply with salt and pepper. A light, wholesome start to your day.",
+        "category": "breakfast",
+        "preferences": [
+            "halal",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Eggs",
+            "Spinach",
+            "Olive oil",
+            "Salt",
+            "Pepper"
+        ],
+        "calorie": 280,
+        "image": "https://t3.ftcdn.net/jpg/12/60/74/38/360_F_1260743806_qYqYSa05ASCAt4n37W2s3hNmNmgvtSyG.jpg"
+    },
+    {
+        "name": "Veggie Breakfast Burrito",
+        "description": "A warm whole wheat wrap filled with eggs, bell peppers, onions, cheese, and avocado. A hearty and balanced vegetarian breakfast.",
+        "category": "breakfast",
+        "preferences": [
+            "halal",
+            "gluten-free",
+            "vegetarian"
+        ],
+        "ingredients": [
+            "Whole wheat wrap",
+            "Eggs",
+            "Bell peppers",
+            "Onions",
+            "Cheese",
+            "Avocado"
+        ],
+        "calorie": 400,
+        "image": "https://t3.ftcdn.net/jpg/09/24/67/56/360_F_924675693_OoABpyb0AfAKIM8K4TwD4SRXU3g04Qfx.jpg"
+    },
+    {
+        "name": "Overnight Oats with Berries",
+        "description": "Creamy oats soaked overnight in almond milk, mixed with berries, chia seeds, and maple syrup. A vegan and gluten-free breakfast made for convenience and flavor.",
+        "category": "breakfast",
+        "preferences": [
+            "halal",
+            "vegan",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Rolled oats",
+            "Almond milk",
+            "Berries",
+            "Chia seeds",
+            "Maple syrup"
+        ],
+        "calorie": 350,
+        "image": "https://images.unsplash.com/photo-1490371475955-4cb3bfc72f71?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3Zlcm5pZ2h0JTIwb2F0c3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "name": "Sweet Potato Hash",
+        "description": "A warm, savory hash made with sweet potatoes, eggs, spinach, and onions, all cooked in olive oil. A comforting and nutritious morning dish.",
+        "category": "breakfast",
+        "preferences": [
+            "halal",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Sweet potatoes",
+            "Eggs",
+            "Onions",
+            "Spinach",
+            "Olive oil"
+        ],
+        "calorie": 450,
+        "image": "https://t3.ftcdn.net/jpg/11/20/74/22/360_F_1120742260_4U0kepTS7nEtWHD1QaaLNwA7CgZTmF7X.jpg"
+    },
+    {
+        "name": "Yogurt Parfait",
+        "description": "Layers of coconut yogurt, crunchy granola, and sweet berries drizzled with honey. A refreshing and dairy-free way to fuel your morning.",
+        "category": "breakfast",
+        "preferences": [
+            "halal",
+            "gluten-free"
+        ],
+        "ingredients": [
+            "Coconut yogurt",
+            "Granola",
+            "Berries",
+            "Honey"
+        ],
+        "calorie": 300,
+        "image": "https://images.unsplash.com/photo-1729368628910-2d58db8657a6?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Grilled Salmon with Quinoa and Steamed Vegetables",
+        "description": "A wholesome kosher-certified meal featuring grilled salmon fillet, fluffy quinoa, and lightly steamed vegetables. Packed with protein and fiber, this dish is perfect for a clean and balanced lunch or dinner.",
+        "category": "lunch",
+        "preferences": [
+            "kosher",
+            "gluten-free",
+            "dairy-free"
+        ],
+        "ingredients": [
+            "Salmon fillet",
+            "Quinoa",
+            "Broccoli",
+            "Carrots",
+            "Olive oil",
+            "Lemon"
+        ],
+        "calorie": 480,
+        "image": "https://media.istockphoto.com/id/1437638727/photo/plate-of-salmon-with-quinoa-and-raw-vegetables.jpg?s=612x612&w=0&k=20&c=fLlZa_B30BxCFf_pPAx2DsEw4OibQSVbwsKKHXyzMuw="
+    },
+    {
+        "name": "Avocado Toast with Cherry Tomatoes",
+        "description": "A hearty and kosher-certified breakfast featuring mashed avocado on gluten-free toast, topped with fresh cherry tomatoes and a sprinkle of sea salt. Simple, wholesome, and delicious.",
+        "category": "breakfast",
+        "preferences": [
+            "kosher",
+            "dairy-free",
+            "nut-free",
+            "vegan"
+        ],
+        "ingredients": [
+            "Gluten-free bread",
+            "Avocado",
+            "Cherry tomatoes",
+            "Olive oil",
+            "Sea salt"
+        ],
+        "calorie": 300,
+        "image": "https://t3.ftcdn.net/jpg/10/66/55/10/360_F_1066551084_b1SiVlnHcN4omVEso24xFmVL2BuBhxPq.jpg"
+    },
+    {
+        "name": "Chickpea Shawarma Bowl",
+        "description": "A vibrant, Middle Eastern-inspired shawarma bowl with spiced chickpeas, fresh veggies, and tahini dressing. 100% kosher, plant-based, and satisfying.",
+        "category": "lunch",
+        "preferences": [
+            "kosher",
+            "vegan",
+            "dairy-free"
+        ],
+        "ingredients": [
+            "Chickpeas",
+            "Cucumber",
+            "Tomato",
+            "Lettuce",
+            "Tahini",
+            "Olive oil",
+            "Spices"
+        ],
+        "calorie": 510,
+        "image": "https://runningonrealfood.com/wp-content/uploads/2019/07/vegan-chickpea-shawarma-salad-bowls-running-on-real-food-5.jpg"
+    },
+    {
+        "name": "Stuffed Bell Peppers with Rice & Herbs",
+        "description": "Colorful bell peppers stuffed with herbed rice and vegetables, baked to perfection. A satisfying and kosher-compliant dinner that's gluten-free and dairy-free.",
+        "category": "dinner",
+        "preferences": [
+            "kosher",
+            "gluten-free",
+            "vegan",
+            "dairy-free"
+        ],
+        "ingredients": [
+            "Bell peppers",
+            "White rice",
+            "Zucchini",
+            "Onion",
+            "Tomato paste",
+            "Parsley",
+            "Olive oil"
+        ],
+        "calorie": 440,
+        "image": "https://t4.ftcdn.net/jpg/02/47/26/73/360_F_247267318_hssbbXBj5XPJL4RAngWOKnFTZ6OuyIZW.jpg"
+    },
+    {
+        "name": "Caprese Salad with Balsamic Glaze",
+        "description": "A fresh and light vegetarian lunch featuring ripe tomatoes, mozzarella cheese, and basil leaves, drizzled with balsamic glaze. Classic, flavorful, and kosher-friendly.",
+        "category": "lunch",
+        "preferences": [
+            "vegetarian",
+            "gluten-free",
+            "nut-free",
             "kosher"
         ],
         "ingredients": [
-            "salmon fillet",
-            "carrots",
-            "broccoli",
-            "olive oil"
+            "Tomatoes",
+            "Fresh mozzarella",
+            "Basil",
+            "Olive oil",
+            "Balsamic glaze",
+            "Salt"
         ],
-        "calorie": 510
-    }
+        "calorie": 280,
+        "image": "https://t4.ftcdn.net/jpg/13/86/59/61/360_F_1386596159_XafLYEayo3Syvehi5QmNbwpd7UNXnTtG.jpg"
+    },
+    {
+        "name": "Lentil Stew with Rice",
+        "description": "A hearty and nourishing stew made with lentils, carrots, and tomatoes, served over a bed of steamed rice. This vegetarian dish is packed with protein and fiber—perfect for a satisfying kosher dinner.",
+        "category": "dinner",
+        "preferences": [
+            "vegetarian",
+            "gluten-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Lentils",
+            "Carrots",
+            "Tomatoes",
+            "Garlic",
+            "Onion",
+            "Spices",
+            "Rice"
+        ],
+        "calorie": 480,
+        "image": "https://images.slurrp.com/webstories/wp-content/uploads/2023/11/dragne-marius-EdzsUFqHbaY-unsplash.jpg"
+    },
+    {
+        "name": "Poha (Flattened Rice) with Peas & Peanuts",
+        "description": "A traditional Indian breakfast made with flattened rice, cooked with peas, peanuts, turmeric, and mustard seeds. A light, yet flavorful dish that’s perfect for a vegetarian start to the day.",
+        "category": "breakfast",
+        "preferences": [
+            "vegetarian",
+            "vegan",
+            "gluten-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Flattened rice (poha)",
+            "Green peas",
+            "Peanuts",
+            "Onion",
+            "Mustard seeds",
+            "Turmeric",
+            "Curry leaves",
+            "Lemon juice"
+        ],
+        "calorie": 250,
+        "image": "https://t3.ftcdn.net/jpg/01/15/52/44/360_F_115524464_zomEhJZJg86ZgmBu3erQpocmVyeZBlv0.jpg"
+    },
+    {
+        "name": "Avocado & Cauliflower Rice Bowl",
+        "description": "A simple yet satisfying breakfast bowl with creamy avocado, sautéed cauliflower rice, and a drizzle of olive oil. Packed with healthy fats, this dish is perfect for a low-carb, keto start to the day.",
+        "category": "breakfast",
+        "preferences": [
+            "vegetarian",
+            "keto",
+            "gluten-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Avocado",
+            "Cauliflower rice",
+            "Olive oil",
+            "Garlic",
+            "Cilantro",
+            "Lemon juice"
+        ],
+        "calorie": 350,
+        "image": "https://t4.ftcdn.net/jpg/10/63/48/97/360_F_1063489761_QBVSEjHv6H3F8OHt5Uvl4KVoLYkYoNqg.jpg"
+    },
+    {
+        "name": "Zucchini Noodles with Pesto",
+        "description": "A delicious and refreshing low-carb alternative to pasta, this dish features zucchini noodles topped with homemade pesto sauce made from basil, olive oil, and nutritional yeast. A perfect keto lunch.",
+        "category": "lunch",
+        "preferences": [
+            "vegetarian",
+            "keto",
+            "gluten-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Zucchini",
+            "Basil",
+            "Olive oil",
+            "Garlic",
+            "Nutritional yeast",
+            "Lemon juice"
+        ],
+        "calorie": 400,
+        "image": "https://t3.ftcdn.net/jpg/08/81/10/48/360_F_881104851_gvAg3FQcaPfLqzksJjHv7qq43rjhnCpb.jpg"
+    },
+    {
+        "name": "Stuffed Mushrooms with Cream Cheese",
+        "description": "These keto-friendly stuffed mushrooms are filled with a creamy mixture of cream cheese, spinach, and herbs. A savory, low-carb dinner option that’s both filling and satisfying.",
+        "category": "dinner",
+        "preferences": [
+            "vegetarian",
+            "keto",
+            "gluten-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Portobello mushrooms",
+            "Cream cheese",
+            "Spinach",
+            "Garlic",
+            "Olive oil",
+            "Nutritional yeast"
+        ],
+        "calorie": 330,
+        "image": "https://images.pexels.com/photos/4294490/pexels-photo-4294490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Grilled Halloumi Salad with Olive Tapenade",
+        "description": "A vibrant keto lunch featuring grilled halloumi cheese over a bed of mixed greens, cherry tomatoes, cucumber, and a bold olive tapenade dressing. High in fat, low in carbs, and full of Mediterranean flavor.",
+        "category": "lunch",
+        "preferences": [
+            "vegetarian",
+            "keto",
+            "gluten-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Halloumi cheese",
+            "Cherry tomatoes",
+            "Cucumber",
+            "Mixed greens",
+            "Black olives",
+            "Olive oil",
+            "Lemon juice",
+            "Oregano"
+        ],
+        "calorie": 420,
+        "image": "https://media.istockphoto.com/id/1347926310/photo/delicious-summer-salad-with-tomatoes-spinach-halloumi-cheese-honey-olive-oil.jpg?s=612x612&w=0&k=20&c=WmQWagTB0Xr4uc9BdV5nRnRB1hdvpNp9uO69gbXhfKs="
+    },
+    {
+        "name": "Roasted Veggie Bowl with Tahini Drizzle",
+        "description": "A nourishing bowl filled with roasted seasonal vegetables like sweet potatoes, zucchini, and bell peppers, served with a creamy tahini drizzle. Packed with fiber, flavor, and perfect for a vegetarian paleo lunch.",
+        "category": "lunch",
+        "preferences": [
+            "vegetarian",
+            "paleo",
+            "gluten-free",
+            "dairy-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Sweet potatoes",
+            "Zucchini",
+            "Bell peppers",
+            "Red onion",
+            "Olive oil",
+            "Tahini",
+            "Lemon juice",
+            "Garlic"
+        ],
+        "calorie": 380,
+        "image": "https://cookingforpeanuts.com/wp-content/uploads/2021/05/Roasted-Chickpea-Veggie-Bowl.jpg"
+    },
+    {
+        "name": "Chia Pudding with Coconut Milk & Berries",
+        "description": "A creamy and satisfying paleo breakfast made with chia seeds soaked in coconut milk, topped with fresh mixed berries. Rich in omega-3s and naturally sweet, it’s perfect to start the day.",
+        "category": "breakfast",
+        "preferences": [
+            "vegetarian",
+            "paleo",
+            "gluten-free",
+            "dairy-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Chia seeds",
+            "Coconut milk",
+            "Strawberries",
+            "Blueberries",
+            "Maple syrup (optional)"
+        ],
+        "calorie": 310,
+        "image": "https://twohealthykitchens.com/wp-content/uploads/2019/09/Chia-Pudding-with-Coconut-Milk-Recipe-square.jpg"
+    },
+    {
+        "name": "Grilled Eggplant Steaks with Herbed Cauliflower Mash",
+        "description": "Smoky grilled eggplant slices served with a creamy cauliflower mash seasoned with garlic and fresh herbs. A comforting and satisfying paleo dinner packed with flavor and nutrients.",
+        "category": "dinner",
+        "preferences": [
+            "vegetarian",
+            "paleo",
+            "gluten-free",
+            "dairy-free",
+            "nut-free",
+            "kosher"
+        ],
+        "ingredients": [
+            "Eggplant",
+            "Cauliflower",
+            "Garlic",
+            "Olive oil",
+            "Parsley",
+            "Thyme",
+            "Salt",
+            "Black pepper"
+        ],
+        "calorie": 390,
+        "image": "https://www.mensjournal.com/.image/t_share/MTk2MTM2NTI1ODczMDMwMjg5/cauliflower-steak.jpg"
+    }    
 ]
