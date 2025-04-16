@@ -25,11 +25,16 @@ export default function DietMealPlanner() {
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
-    const preferences = searchParams.get("preferences")?.split(",") || [];
+    const preferences = searchParams.get("preferences")?.split(",").filter(p => p) || [];
     setUserPreferences(preferences);
-    const matchedMeals = mealsData.filter(meal =>
-      meal.preferences.some(pref => preferences.includes(pref))
-    );
+
+    const matchedMeals =
+      preferences.length === 0
+        ? mealsData
+        : mealsData.filter(meal =>
+          meal.preferences.some(pref => preferences.includes(pref))
+        );
+
     setFilteredMeals(matchedMeals);
   }, [location.search]);
 
